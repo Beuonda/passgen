@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+
+/* ? Vaibales */
+:root {
+  --primary: #5cb368;
+}
+
+/* ? Default Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo Play", sans-serif;
+  user-select: none;
+}
+
+/* ? Icons Settings */
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" -25, "opsz" 48;
+}
+
+/* ? Styles */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--primary);
+  accent-color: var(--primary);
+}
+
+.container {
+  width: 450px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.container h2 {
+  font-size: 1.31rem;
+  padding: 1rem 1.175rem;
+  border-bottom: 1px solid #d4dbe5;
+}
+
+.wrapper {
+  margin: 1.25rem 1.75rem;
+}
+
+.wrapper .input-box {
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  height: 53px;
+  color: #000;
+  background: none;
+  font-size: 1.06rem;
+  font-weight: 500;
+  border-radius: 4px;
+  letter-spacing: 1.4px;
+  border: 1px solid #aaa;
+  padding: 0 2.85rem 0 1rem;
+}
+
+.input-box span {
+  position: absolute;
+  right: 13px;
+  line-height: 53px;
+  color: #707070;
+  cursor: pointer;
+}
+
+.wrapper .pass-indicator {
+  width: 100%;
+  height: 4px;
+  position: relative;
+  background-color: #dfdfdf;
+  margin-top: 0.75rem;
+  border-radius: 25px;
+}
+
+.pass-indicator::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  border-radius: inherit;
+  background-color: #f1c80b;
+  transition: width 0.3s ease;
+}
+
+.pass-indicator#weak::before {
+  width: 20%;
+  background-color: #e64a4a;
+}
+
+.pass-indicator#medium::before {
+  width: 50%;
+  background-color: #f1c80b;
+}
+
+.pass-indicator#strong::before {
+  width: 100%;
+  background-color: var(--primary);
+}
+
+.wrapper .pass-length {
+  margin: 1.56rem 0 1.25rem;
+}
+
+.pass-length .details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pass-length input {
+  width: 100%;
+  height: 5px;
+}
+
+.pass-settings .options {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.pass-settings .options .option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: calc(100% / 2);
+}
+
+.options .option:first-child {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.options .option:first-child input {
+  opacity: 0.5;
+}
+
+.options .option input {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.options .option label {
+  cursor: pointer;
+  padding-right: 0.63rem;
+}
+
+.wrapper .generate-btn {
+  width: 100%;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--primary);
+  font-size: 1.56rem;
+  border-radius: 5px;
+  padding: 0.54rem 0;
+  margin: 0.9rem 0 1.3rem;
+}
+
+footer {
+  position: fixed;
+  padding: 0.2rem;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #34663b4f;
+  text-align: center;
+}
