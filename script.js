@@ -14,3 +14,28 @@ const options = document.querySelectorAll(".option input")
 const generateButton = document.querySelector(".generate-btn");
 
 /* ============== Start Coding Here, Beuonda! ================= */
+
+// ? let
+// ? const
+
+// symbols
+const characters = {
+    lowercase: "abcdefghijklmnopqrstuvwxyz",
+    uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    numbers: "0123456789",
+    symbols: "^!$%&|[](){}:;.,*+-#@<>~?_",
+}
+
+function hoalhb() {
+    const lgov = lengthSlider.value;
+    console.log(lgov);
+}
+
+function updateSlider() {
+    displayLength.innerText = lengthSlider.value;
+    hoalhb();
+}
+
+updateSlider();
+
+lengthSlider.addEventListener("input", updateSlider);

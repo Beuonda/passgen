@@ -1,63 +1,64 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="styles.css" />
-    <!-- ? Icons -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <div class="container">
-      <h2>مولد كلمات سر</h2>
-      <div class="wrapper">
-        <div class="input-box">
-          <input type="text" disabled />
-          <span class="material-symbols-rounded"> copy_all </span>
-        </div>
-        <div class="pass-indicator"></div>
-        <div class="pass-length">
-          <div class="details">
-            <label class="title">طول كلمة السر</label>
-            <span></span>
-          </div>
-          <input type="range" class="range" min="6" max="30" step="1" />
-        </div>
-        <div class="pass-settings">
-          <label class="title">الخصائص</label>
-          <ul class="options">
-            <li class="option">
-              <input type="checkbox" id="lowercase" checked />
-              <label for="lowercase">احرف صغيرة (a-z)</label>
-            </li>
-            <li class="option">
-              <input type="checkbox" id="uppercase" />
-              <label for="uppercase">احرف كبيرة (A-Z)</label>
-            </li>
 
-            <li class="option">
-              <input type="checkbox" id="numbers" />
-              <label for="numbers">ارقام (0-9)</label>
-            </li>
-            <li class="option">
-              <input type="checkbox" id="symbols" />
-              <label for="symbols">رموز (!-^+&%)</label>
-            </li>
-            <li class="option">
-              <input type="checkbox" id="spaces" />
-              <label for="spaces">مساحات</label>
-            </li>
-          </ul>
-        </div>
-        <button class="generate-btn">توليد كلمة سر</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- ? Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>مولد كلمات سر</h2>
+    <div class="wrapper">
+      <div class="input-box">
+        <input type="text" disabled />
+        <span class="material-symbols-rounded"> copy_all </span>
       </div>
+      <div class="pass-indicator"></div>
+      <div class="pass-length">
+        <div class="details">
+          <label class="title">طول كلمة السر</label>
+          <span></span>
+        </div>
+        <input type="range" class="range" min="6" max="30" step="1" />
+      </div>
+      <div class="pass-settings">
+        <label class="title">الخصائص</label>
+        <ul class="options">
+          <li class="option">
+            <input type="checkbox" id="lowercase" checked />
+            <label for="lowercase">احرف صغيرة (a-z)</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="uppercase" />
+            <label for="uppercase">احرف كبيرة (A-Z)</label>
+          </li>
+
+          <li class="option">
+            <input type="checkbox" id="numbers" />
+            <label for="numbers">ارقام (0-9)</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="symbols" />
+            <label for="symbols">رموز (!-^+&%)</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="spaces" />
+            <label for="spaces">مساحات</label>
+          </li>
+        </ul>
+      </div>
+      <button class="generate-btn">توليد كلمة سر</button>
     </div>
-    <!-- غيري اسمي باسمك، لما تخلصي المشروع ويشتغل -->
-    <footer>مصمم بكل ❤️ من مهند</footer>
-  </body>
+  </div>
+  <!-- غيري اسمي باسمك، لما تخلصي المشروع ويشتغل -->
+  <footer>مصمم بكل ❤️ من بيوندا</footer>
+</body>
+
 </html>
