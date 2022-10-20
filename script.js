@@ -18,24 +18,38 @@ const generateButton = document.querySelector(".generate-btn");
 // ? let
 // ? const
 
-// symbols
 const characters = {
     lowercase: "abcdefghijklmnopqrstuvwxyz",
     uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     numbers: "0123456789",
     symbols: "^!$%&|[](){}:;.,*+-#@<>~?_",
+    spaces: "   "
 }
 
-function hoalhb() {
-    const lgov = lengthSlider.value;
-    console.log(lgov);
+const generatePassword = () => {
+    const passLength = lengthSlider.value;
+    let staticPassword = "";
+    let randomPassword = "";
+
+    options.forEach((option) => {
+        if (option.checked) {
+            staticPassword += characters[option.id]
+        }
+    })
+
+    for (let i = 0; i < passLength; i++) {
+        randomPassword += staticPassword[Math.floor(Math.random() * staticPassword.length)]
+    }
+
+    passwordInput.value = randomPassword
 }
 
-function updateSlider() {
+const updateSlider = () => {
     displayLength.innerText = lengthSlider.value;
-    hoalhb();
+    generatePassword();
 }
 
 updateSlider();
 
+generateButton.addEventListener("click", generatePassword)
 lengthSlider.addEventListener("input", updateSlider);
