@@ -15,9 +15,6 @@ const generateButton = document.querySelector(".generate-btn");
 
 /* ============== Start Coding Here, Beuonda! ================= */
 
-// ? let
-// ? const
-
 const characters = {
     lowercase: "abcdefghijklmnopqrstuvwxyz",
     uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -38,7 +35,7 @@ const generatePassword = () => {
     })
 
     for (let i = 0; i < passLength; i++) {
-        randomPassword += staticPassword[Math.floor(Math.random() * staticPassword.length)]
+        randomPassword += staticPassword[Math.floor(Math.random() * staticPassword.length)];
     }
 
     passwordInput.value = randomPassword
@@ -47,9 +44,18 @@ const generatePassword = () => {
 const updateSlider = () => {
     displayLength.innerText = lengthSlider.value;
     generatePassword();
+    passIndicator.id = lengthSlider.value <= 8 ? "weak" : lengthSlider.value <= 24 ? "medium" : "strong";
 }
 
-updateSlider();
+updateSlider()
 
-generateButton.addEventListener("click", generatePassword)
+copyAll.addEventListener("click", async () => {
+    navigator.clipboard.writeText(passwordInput.value);
+    copyAll.innerText = "check";
+    setTimeout(() => {
+        copyAll.innerText = "copy_all";
+    }, 1500);
+});
+
+generateButton.addEventListener("click", generatePassword);
 lengthSlider.addEventListener("input", updateSlider);

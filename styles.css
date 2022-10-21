@@ -2,7 +2,7 @@
 
 /* ? Vaibales */
 :root {
-  --primary: #7ec590;
+  --primary: #9dcbeb;
 }
 
 /* ? Default Styles */
@@ -171,6 +171,6 @@ footer {
   right: 0;
   bottom: 0;
   width: 100%;
-  background-color: #34663b4f;
+  background-color: #9dcbeb4f;
   text-align: center;
 }
